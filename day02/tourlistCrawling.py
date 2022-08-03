@@ -59,7 +59,7 @@ def getTourismStatsService(nat_cd, ed_cd, nStartYear, nEndYear):
                 if jsonData['response']['body']['items'] == '':
                     isDataEnd = True
                     dataEnd = f'{year}{month-1:0>2}'
-                    print(f'제공되는 데이터는 {year}년 {month-1}까지 입니다.')
+                    print(f'제공되는 데이터는 {year}년 {month-1}월 까지 입니다.')
                     break
                 
                 print(json.dumps(jsonData, indent=4, sort_keys=True, ensure_ascii = False))
@@ -74,10 +74,7 @@ def getTourismStatsService(nat_cd, ed_cd, nStartYear, nEndYear):
     return(jsonResult, result, natName, ed, dataEnd)
 
 
-                
-
-
-
+            
 
 def main():
     jsonResult = []
@@ -98,7 +95,13 @@ def main():
     if natName == '':
         print('데이터 전달 실패. 공공데이터포털 서비스 확인 요망')
     else:
-        pass
+        # 파일저장 csv
+        columns = ['입국국가', '국가코드', '입국연월', '입국자수']
+        result_df = pd.DataFrame(result, columns=columns)
+        result_df.to_csv(f'./{natName}_{ed}_{nStartYear}_{dataEnd}.csv', index=False,
+                        encoding='utf-8')       # 원하는 방식에 따라 'cp949'로 실행해야함
+
+        print('csv파일 저장 완료')
 
 
 if __name__ == '__main__':
