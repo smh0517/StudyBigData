@@ -21,11 +21,11 @@
   - Beautifulsoup
   - Selenium
 
+## Day 4
 - 빅데이터분석
   - 통계분석
-
-## Day 4
-
+  - 상관분석
+  
 ## Day 5
 
 ## Day 6
