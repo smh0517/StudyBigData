@@ -34,3 +34,10 @@
 ## Day 6
 - 빅데이터분석
   - 지리정보분석
+
+
+## PyQt 1
+  - PyQt5 학습
+    - PyQt5, Designer 설치
+    - PyQt5 기본폼 만들기
+    
