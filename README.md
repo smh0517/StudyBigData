@@ -44,3 +44,8 @@
   - pyQt5 학습
     - QtDesigner로 UI 생성
     - 네이버 API로 네이버뉴스, 네이버영화 생성
+    
+## PyQt 3
+
+!! 네이버뉴스검색 이미지 저장 (링크 : https://raw.githubusercontent.com/smh0517/StudyBigData/main/image/navernews_crawling.PNG)
+https://raw.githubusercontent.com/smh0517/StudyBigData/main/image/navernews_crawling.PNG
